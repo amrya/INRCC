@@ -82,7 +82,7 @@ const uint64_t START_BLOCK_REWARD                            = (UINT64_C(320000)
 const uint64_t MIN_BLOCK_REWARD                              = (UINT64_C(150) * parameters::COIN);
 const uint64_t REWARD_HALVING_INTERVAL                       = (UINT64_C(11000));
 
-const char     CRYPTONOTE_NAME[]                             = "digitalnote";
+const char     CRYPTONOTE_NAME[]                             = "INRCC";
 const char     GENESIS_COINBASE_TX_HEX[]                     = "010601ff0001808088a5a9a307029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210138dc57b313e2560fa75f5d7c9a6398800855220aefb3603bc70826adc83e0cc1";
 const uint32_t GENESIS_NONCE                                 = 420;
 
