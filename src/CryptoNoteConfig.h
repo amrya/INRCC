@@ -14,7 +14,7 @@ namespace parameters {
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000; // block header blob limit, never used!
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0xDB; // addresses start with "0xDB"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x892; // addresses start with "RS"
 const size_t   CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 6;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
@@ -23,7 +23,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 30;
 const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1);
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 32000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 20000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 // COIN - number of smallest units in one coin
@@ -33,8 +33,8 @@ const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(100000);
 
 const uint64_t DIFFICULTY_TARGET                             = 99; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
-const size_t   DIFFICULTY_WINDOW                             = 240; // blocks
-const size_t   DIFFICULTY_CUT                                = 30;  // timestamps to cut after sorting
+const size_t   DIFFICULTY_WINDOW                             = 720; // blocks
+const size_t   DIFFICULTY_CUT                                = 60;  // timestamps to cut after sorting
 const size_t   DIFFICULTY_LAG                                = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
@@ -83,7 +83,7 @@ const uint64_t MIN_BLOCK_REWARD                              = (UINT64_C(150) * 
 const uint64_t REWARD_HALVING_INTERVAL                       = (UINT64_C(11000));
 
 const char     CRYPTONOTE_NAME[]                             = "INRCC";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010601ff0001808088a5a9a307029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210138dc57b313e2560fa75f5d7c9a6398800855220aefb3603bc70826adc83e0cc1";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 const uint32_t GENESIS_NONCE                                 = 420;
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
@@ -116,9 +116,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "85ae8734f90bc1ee295ceb0ec05a49852d4dbbc9d1c27a619b5f4bdf26a0196e";
 
 const std::initializer_list<const char*> SEED_NODES = {
-  "seed.digitalnote.org:42080",
-  "seed.ducknote.org:42080"
-};
+  "162.243.100.179:42136",
+  };
 
 struct CheckpointData {
   uint32_t height;
